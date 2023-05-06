@@ -13,14 +13,14 @@ git clone https://github.com/kiss-community/repo /home/dk/repos/repo
 git clone https://github.com/kiss-community/community /home/dk/repos/community
 git clone https://github.com/ehawkvu/kiss-xorg /home/dk/repos/xorg
 
-echo -e "KISS_PATH=/home/dk/repos/repo/core" >> ~/.profile
-echo -e "KISS_PATH=$KISS_PATH:/home/dk/repos/repo/extra" >> ~/.profile
-echo -e "KISS_PATH=$KISS_PATH:/home/dk/repos/repo/wayland" >> ~/.profile
-echo -e "KISS_PATH=$KISS_PATH:/home/dk/repos/xorg/extra" >> ~/.profile
-echo -e "KISS_PATH=$KISS_PATH:/home/dk/repos/xorg/xorg" >> ~/.profile
-echo -e "KISS_PATH=$KISS_PATH:/home/dk/repos/xorg/community" >> ~/.profile
-echo -e "KISS_PATH=$KISS_PATH:/home/dk/repos/community/community" >> ~/.profile
-echo -e "export KISS_PATH" >> ~/.profile
+echo "KISS_PATH=/home/dk/repos/repo/core" >> ~/.profile
+echo "KISS_PATH=$KISS_PATH:/home/dk/repos/repo/extra" >> ~/.profile
+echo "KISS_PATH=$KISS_PATH:/home/dk/repos/repo/wayland" >> ~/.profile
+echo "KISS_PATH=$KISS_PATH:/home/dk/repos/xorg/extra" >> ~/.profile
+echo "KISS_PATH=$KISS_PATH:/home/dk/repos/xorg/xorg" >> ~/.profile
+echo "KISS_PATH=$KISS_PATH:/home/dk/repos/xorg/community" >> ~/.profile
+echo "KISS_PATH=$KISS_PATH:/home/dk/repos/community/community" >> ~/.profile
+echo "export KISS_PATH" >> ~/.profile
 
 . ~/.profile
 
