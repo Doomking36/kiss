@@ -8,9 +8,9 @@ mv profile /mnt/root
 /mnt/bin/kiss-chroot /mnt << "EOT"
 mkdir -p /home/dk/repos
 mv profile /home/dk
-mk profile ~/.profile
 
 cd /home/dk
+mk profile ~/.profile
 
 git clone https://github.com/kiss-community/repo /home/dk/repos/repo
 git clone https://github.com/kiss-community/community /home/dk/repos/community
