@@ -4,7 +4,7 @@ yes | pacman -Sy tar curl xz
 curl --output kiss.xz https://codeberg.org/attachments/7f91bc9e-6fb1-481f-bacd-95798fbf298c
 tar xf kiss.xz -C /mnt
 
-/mnt/bin/kiss-chroot /mnt
+/mnt/bin/kiss-chroot /mnt << "EOT"
 mkdir -p /home/dk/repos
 
 cd /home/dk
@@ -44,3 +44,4 @@ tune2fs -O ^metadata_csum_seed /dev/sda
 
 grub-install --target=i386-pc /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
+EOT
