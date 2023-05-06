@@ -41,6 +41,7 @@ chmod +x genfstab
 ./genfstab -U / >> /etc/fstab
 
 tune2fs -O ^metadata_csum_seed /dev/sda1
+echo “GRUB_DISABLE_OS_PROBER=false” >> /etc/default/grub
 
 grub-install --target=i386-pc /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
