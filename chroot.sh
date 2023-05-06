@@ -39,7 +39,7 @@ curl -fLO https://github.com/cemkeylan/genfstab/raw/master/genfstab
 chmod +x genfstab
 ./genfstab -U / >> /etc/fstab
 
-tune2fs -O ^metadata_csum_seed /dev/sda
+tune2fs -O ^metadata_csum_seed /dev/sda1
 
 grub-install --target=i386-pc /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
