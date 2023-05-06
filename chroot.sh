@@ -26,8 +26,9 @@ rm -rf vmware
 echo "kiss" > /etc/hostname
 echo "127.0.0.1 kiss.localdomain kiss::1 kiss.localdomain kiss ip6-localhost" > /etc/hosts
 
-passwd
+echo 123 | passwd root --stdin
 adduser -h /home/dk dk
+echo 123 | passwd dk --stdin
 addgroup dk wheel
 
 su dk << EOT
