@@ -9,8 +9,3 @@ cp profile /mnt
 /mnt/bin/kiss-chroot /mnt << EOT
 ./chroot.sh
 EOT
-
-cd ..
-rm -rf kiss-setup
-
-umount /mnt
