@@ -3,17 +3,17 @@
 yes | pacman -Sy tar curl xz
 curl --output kiss.xz https://codeberg.org/attachments/7f91bc9e-6fb1-481f-bacd-95798fbf298c
 tar xf kiss.xz -C /mnt
+mv profile /mnt/root
 
 /mnt/bin/kiss-chroot /mnt << "EOT"
 mkdir -p /home/dk/repos
+cp profile ~/.profile
 
 cd /home/dk
 
 git clone https://github.com/kiss-community/repo /home/dk/repos/repo
 git clone https://github.com/kiss-community/community /home/dk/repos/community
 git clone https://github.com/ehawkvu/kiss-xorg /home/dk/repos/xorg
-
-echo "KISS_PATH=/home/dk/repos/repo/core:/home/dk/repos/repo/extra:/home/dk/repos/repo/wayland:/home/dk/repos/xorg/extra:/home/dk/repos/xorg/xorg:/home/dk/repos/xorg/community:/home/dk/repos/community/community" > ~/.profile
 
 . ~/.profile
 
@@ -35,6 +35,12 @@ echo "127.0.0.1 kiss.localdomain kiss::1 kiss.localdomain kiss ip6-localhost" > 
 passwd
 adduser -h /home/dk dk
 addgroup dk wheel
+
+su dk
+git clone https://github.com/Doomking36/kiss-setup
+cp kiss-setup/profile ~/.profile
+. ~/.profile
+exit
 
 curl -fLO https://github.com/cemkeylan/genfstab/raw/master/genfstab
 chmod +x genfstab
