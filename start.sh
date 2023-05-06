@@ -7,7 +7,8 @@ mv profile /mnt/root
 
 /mnt/bin/kiss-chroot /mnt << "EOT"
 mkdir -p /home/dk/repos
-cp profile ~/.profile
+mv profile /home/dk
+mk profile ~/.profile
 
 cd /home/dk
 
