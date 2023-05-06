@@ -6,6 +6,7 @@ tar xf kiss.xz -C /mnt
 mv profile /mnt/root
 
 /mnt/bin/kiss-chroot /mnt << "EOT"
+cd ~
 mkdir -p /home/dk/repos
 mv profile /home/dk
 
