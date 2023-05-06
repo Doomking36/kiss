@@ -3,19 +3,24 @@
 yes | pacman -Sy tar curl xz
 curl --output kiss.xz https://codeberg.org/attachments/7f91bc9e-6fb1-481f-bacd-95798fbf298c
 tar xf kiss.xz -C /mnt
-mv profile /mnt/root
 
 /mnt/bin/kiss-chroot /mnt << "EOT"
-cd ~
-mkdir -p /home/dk/repos
-mv profile /home/dk
 
+mkdir -p /home/dk/repos
 cd /home/dk
-mk profile ~/.profile
 
 git clone https://github.com/kiss-community/repo /home/dk/repos/repo
 git clone https://github.com/kiss-community/community /home/dk/repos/community
 git clone https://github.com/ehawkvu/kiss-xorg /home/dk/repos/xorg
+
+echo -e "KISS_PATH=/home/dk/repos/repo/core" >> ~/.profile
+echo -e "KISS_PATH=$KISS_PATH:/home/dk/repos/repo/extra" >> ~/.profile
+echo -e "KISS_PATH=$KISS_PATH:/home/dk/repos/repo/wayland >> ~/.profile
+echo -e "KISS_PATH=$KISS_PATH:/home/dk/repos/xorg/extra >> ~/.profile
+echo -e "KISS_PATH=$KISS_PATH:/home/dk/repos/xorg/xorg >> ~/.profile
+echo -e "KISS_PATH=$KISS_PATH:/home/dk/repos/xorg/community >> ~/.profile
+echo -e "KISS_PATH=$KISS_PATH:/home/dk/repos/community/community >> ~/.profile
+echo -e "export KISS_PATH" >> ~/.profile
 
 . ~/.profile
 
