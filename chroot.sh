@@ -31,6 +31,13 @@ adduser -h /home/dk dk
 echo dk:123 | chpasswd
 addgroup dk wheel
 
+git clone https://codeberg.org/sw1tchbl4d3/rdo
+cd rdo
+mkdir -p /usr/local/bin
+make
+make install
+cd ..
+
 su dk << EOT
 git clone https://github.com/Doomking36/kiss-setup
 cp kiss-setup/profile /home/dk
