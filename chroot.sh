@@ -43,6 +43,7 @@ git clone https://github.com/Doomking36/kiss-setup
 cp kiss-setup/profile /home/dk
 mv profile ~/.profile
 EOT
+
 curl -fLO https://github.com/cemkeylan/genfstab/raw/master/genfstab
 chmod +x genfstab
 ./genfstab -U / >> /etc/fstab
