@@ -11,9 +11,9 @@ git clone https://github.com/ehawkvu/kiss-xorg /home/dk/repos/xorg
 
 . ~/.profile
 
-echo | kiss u
-echo | kiss U
-echo | kiss b baseinit grub e2fsprogs dhcpcd ncurses libelf perl vim libudev-zero util-linux
+yes | kiss u
+yes | kiss U
+yes | kiss b baseinit grub e2fsprogs dhcpcd ncurses libelf perl vim libudev-zero util-linux
 
 git clone https://github.com/Doomking36/vmware
 cd vmware
