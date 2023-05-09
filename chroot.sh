@@ -31,6 +31,9 @@ adduser -h /home/dk dk
 echo dk:123 | chpasswd
 addgroup dk wheel
 
+echo permit persist :wheel >> /etc/doas.conf
+echo permit :wheel cmd env >> /etc/doas.conf
+
 su dk << EOT
 git clone https://github.com/Doomking36/kiss-setup
 cp kiss-setup/profile /home/dk
