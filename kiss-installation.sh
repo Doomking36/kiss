@@ -6,8 +6,3 @@ echo "========== Step 2 =========="
 ./start.sh
 echo "========== Step 3 =========="
 grub-install --boot-directory /mnt/boot /dev/sda
-
-cd ..
-rm -rf kiss*
-
-umount /mnt
