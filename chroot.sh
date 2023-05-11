@@ -5,6 +5,8 @@ mv profile /home/dk
 cd /home/dk
 mv profile ~/.profile
 
+chmod u+s /usr/bin/busybox-suid
+
 git clone https://github.com/kiss-community/repo /home/dk/repos/repo
 git clone https://github.com/kiss-community/community /home/dk/repos/community
 git clone https://github.com/ehawkvu/kiss-xorg /home/dk/repos/xorg
