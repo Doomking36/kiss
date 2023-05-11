@@ -32,6 +32,8 @@ rm -rf vmware
 echo "kiss" > /etc/hostname
 echo "127.0.0.1 kiss.localdomain kiss::1 kiss.localdomain kiss ip6-localhost" > /etc/hosts
 
+export TZ=CDT
+
 echo root:123 | chpasswd
 adduser -h /home/dk dk
 echo dk:123 | chpasswd
