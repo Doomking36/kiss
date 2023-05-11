@@ -50,7 +50,9 @@ rm -rf genfstab kiss-setup/
 cd /
 rm -rf chroot.sh
 
-yes | kiss b efibootmgr wpa_supplicant dosfstools
+yes | kiss b efibootmgr wpa_supplicant dosfstools tzdata
+
+ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime
 
 tune2fs -O ^metadata_csum_seed /dev/sda1
 echo GRUB_DISABLE_OS_PROBER=false >> /etc/default/grub
