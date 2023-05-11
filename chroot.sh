@@ -5,12 +5,12 @@ export CXXFLAGS="-march=x86-64 -mtune=generic -Os"
 export MAKEFLAGS="-j1"
 export TZ=CDT
 
+chmod u+s /usr/bin/busybox-suid
+
 mkdir -p /home/dk/repos
 mv profile /home/dk
 cd /home/dk
 mv profile ~/.profile
-
-chmod u+s /usr/bin/busybox-suid
 
 git clone https://github.com/kiss-community/repo /home/dk/repos/repo
 git clone https://github.com/kiss-community/community /home/dk/repos/community
