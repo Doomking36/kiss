@@ -38,8 +38,8 @@ echo permit nopass root >> /etc/doas.conf
 echo permit nopass :wheel cmd env >> /etc/doas.conf
 
 su dk << EOT
-git clone https://github.com/Doomking36/kiss-setup
-cp kiss-setup/profile /home/dk
+git clone https://github.com/Doomking36/kiss-bios
+cp kiss-bios/profile /home/dk
 mv profile ~/.profile
 EOT
 
