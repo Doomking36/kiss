@@ -11,6 +11,7 @@ export KISS_PATH
 export CFLAGS="-march=x86-64 -mtune=generic -Os"
 export CXXFLAGS="-march=x86-64 -mtune=generic -Os"
 export MAKEFLAGS="-j1"
+export SAMUFLAGS="-j1"
 
 # Set date and time
 export TZ=CDT
