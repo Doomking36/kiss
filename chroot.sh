@@ -55,6 +55,7 @@ chmod +x genfstab
 rm -rf genfstab kiss-setup/
 cd /
 rm -rf chroot.sh
+cd /home/dk
 
 tune2fs -O ^metadata_csum_seed /dev/sda1
 echo GRUB_DISABLE_OS_PROBER=false >> /etc/default/grub
