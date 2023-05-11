@@ -3,6 +3,7 @@
 export CFLAGS="-march=x86-64 -mtune=generic -Os"
 export CXXFLAGS="-march=x86-64 -mtune=generic -Os"
 export MAKEFLAGS="-j1"
+export TZ=CDT
 
 mkdir -p /home/dk/repos
 mv profile /home/dk
@@ -31,8 +32,6 @@ rm -rf vmware
 
 echo "kiss" > /etc/hostname
 echo "127.0.0.1 kiss.localdomain kiss::1 kiss.localdomain kiss ip6-localhost" > /etc/hosts
-
-export TZ=CDT
 
 echo root:123 | chpasswd
 adduser -h /home/dk dk
