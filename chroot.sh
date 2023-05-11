@@ -1,10 +1,5 @@
 #!/bin/sh
 
-export CFLAGS="-march=x86-64 -mtune=generic -Os"
-export CXXFLAGS="-march=x86-64 -mtune=generic -Os"
-export MAKEFLAGS="-j1"
-export TZ=CDT
-
 chmod u+s /usr/bin/busybox-suid
 
 mkdir -p /home/dk/repos
