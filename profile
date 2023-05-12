@@ -8,8 +8,8 @@ KISS_PATH=$KISS_PATH:/home/dk/repos/community/community
 export KISS_PATH
 
 # Build Flags
-export CFLAGS="-march=x86-64 -mtune=generic -Os"
-export CXXFLAGS="-march=x86-64 -mtune=generic -Os"
+export CFLAGS="-march=native -Os"
+export CXXFLAGS="$CFLAGS"
 export MAKEFLAGS="-j1"
 export SAMUFLAGS="-j1"
 
