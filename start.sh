@@ -1,7 +1,7 @@
 #!/bin/sh
 
 yes | pacman -Sy tar curl xz
-curl --output kiss.xz https://codeberg.org/attachments/7f91bc9e-6fb1-481f-bacd-95798fbf298c
+curl --output kiss.xz https://codeberg.org/kiss-community/repo/releases/download/23.04.30/kiss-chroot-23.04.30.tar.xz
 tar xf kiss.xz -C /mnt
 cp chroot.sh /mnt
 cp profile /mnt
